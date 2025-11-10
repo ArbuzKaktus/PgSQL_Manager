@@ -1,0 +1,13 @@
+.vscode/
+build/
+.cache/
+*.o
+*.out
+myApp
+db_config.txt
+db_config
+*.log
+
+# Don't commit config.h (contains passwords), but keep config.h.example
+include/config.h
+!include/config.h.example

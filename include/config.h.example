@@ -1,0 +1,19 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#include <string>
+
+// Database configuration
+// Copy this file to config.h and modify the values for your setup
+// IMPORTANT: config.h is in .gitignore and should not be committed!
+
+namespace Config {
+    // PostgreSQL connection settings
+    const std::string DB_HOST = "localhost";       // Database host (e.g., "localhost", "192.168.1.100")
+    const std::string DB_PORT = "5432";            // PostgreSQL port (default: 5432)
+    const std::string DB_NAME = "employees_db";    // Database name
+    const std::string DB_USER = "postgres";        // Database username
+    const std::string DB_PASSWORD = "postgres";    // Database password
+}
+
+#endif // CONFIG_H
