@@ -84,10 +84,10 @@ void QueryEmployeesCommand::execute(DatabaseManager& dbManager) {
     std::cout << "Found " << employees.size() << " employees matching criteria" << std::endl;
     std::cout << std::string(100, '-') << std::endl;
     
-    int displayCount = std::min(10, static_cast<int>(employees.size()));
-    if (displayCount > 0) {
-        std::cout << "Displaying first " << displayCount << " results:" << std::endl;
-        for (int i = 0; i < displayCount; ++i) {
+    // Display all results
+    if (!employees.empty()) {
+        std::cout << "Displaying all " << employees.size() << " results:" << std::endl;
+        for (size_t i = 0; i < employees.size(); ++i) {
             std::cout << "Full Name: " << std::get<0>(employees[i]) << std::endl;
             std::cout << "Birth Date: " << std::get<1>(employees[i]) << std::endl;
             std::cout << "Gender: " << std::get<2>(employees[i]) << std::endl;
